@@ -1,1 +1,16 @@
-some text - first change
+1. Block level elements initiate line breaks relative to its preceding and succeeding element. This is not
+the case with inline level elements unless the content-contingent width of the inline element aggregated
+with other preceding elements on the same line of the page exceeds the page width, in which case it will
+initiate a line break relative to its preceding element. This distinction arises due to the fact that block
+level elements take up the full width of the page, implying there can never be two block level elements on
+the same line, whereas inline level elements only take up as much width as required by their contents.
+
+2.  visibility: hidden -- the element will not be seen on the page except it will still take up the same space
+                        as it would without the style attribute and retain all other qualitites expected of
+                        an element devoid of the {visibility: hidden} attribute
+    display: none -- element will not be seen on screen and will act as if it did not exist at all in its 
+                    relation to other elements on the page. In particular, it won't take up any space or effect
+                    spacing in any way.
+
+3. Float affects the positioning of an element in relation to its neighboring floated/non-floated elements
+which are part of the webpages "flow" (all elements with {position: relative/static})
