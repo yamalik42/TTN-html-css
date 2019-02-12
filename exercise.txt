@@ -18,4 +18,34 @@ it touches the left or right side of the container or another floated element. T
 non-floated elements which should 'clear' any adjacent floats. A cleared element will be able to move down to a 
 new line relative to an adjacent float which it otherwise would have been horizontally parallel with.
 
-4.
+4. position: fixed -- element is fixed in its position absolutely relative to the viewport.
+   position: absolute -- element is fixed in its position absolutely relative to its parent element and determined
+                         by its top, left, right, bottom properties.
+   position: static -- element positioned according to the normal page flow and can't be offset through the top, 
+                       left, right, bottom or z-index properties.
+   position: relative -- element positioned according to the normal page flow and can be offset relative to itself.
+
+5. https://yamalik42.github.io/TTN-html-css/table.html
+
+6. Meta tags in html contain metadata regarding the webpage. Metadata is data about data, as in what sort of data
+it is or when it was created. In this case the metadata will consist of information such as expiry date, author, etc.
+Meta tags are most practical through their keyword attribute which can be utilized to optimize SE performance.
+
+7. Each html element is conceptually represented as a rectangular box, and this concept is termed the box model. 
+The box has content, padding, borders, and margins respectively layered around one another as if it were an onion.
+Content is the most inner core of the box, then padding surrounds the content which is then surrounded by a border,
+and the final layer is the margin. Each of these properties of the box have their own sub-properties which can be
+modified through css styling which will effect the final rendered view of the box on the webpage.
+
+8. There are four types of css selectors. Class selectors collect all nodes with the specified class attribute. ID 
+selectors collect all nodes with the specified id attribute. Type selectors will collect all nodes of that specified
+type. Universal collectors will collect all nodes bounded by an optional namespace.
+
+9. The doctype declaration informs the browser as to what version of html to use in the compilation of the code in the
+file when rendered on the DOM. 
+
+10. <article> -- used to define big text areas, the substantial part of the page which contains written words.
+   <aside> -- used for content that will not be in the main part of the page but instead on off to a side.
+   <details> -- used for information regarding the webpage that is not part of the main content of the page.
+   <figure> -- used for separated and specialilized content such as photos, diagrams, code snippets, etc..
+   <figcaption> -- used to provide a caption for <figure> content.
