@@ -1,0 +1,72 @@
+INITIALIZE A GIT REPO:
+>> mkdir myRepo
+>> cd myRepo
+>> git init
+
+ADD FILES TO REPO:
+>> touch file1.txt file2.txt file3.txt
+>> git add .
+
+UNSTAGE 1 FILE:
+>> git reset file3.txt
+
+COMMIT THE FILE:
+>> git commit -m 'commit unstaged' file3.txt
+
+ADD A REMOTE:
+>> git remote add origin git@github.com:yamalik42/myRep.git
+
+UNDO CHANGES TO A FILE:
+>> echo "some changes" >> file1.txt
+>> git checkout -- file1.txt
+
+PUSH CHANGES:
+>> echo "some changes" >> file1.txt
+>> git add file1.txt
+>> git commit -m 'file1 change'
+>> git push -u origin master
+
+CLONE REPO:
+>> mkdir ../cloned-myRepo
+>> cd ../cloned-myRepo
+>> git clone git@github.com:yamalik42/myRepo.git
+
+ADD CHANGES TO ONE COPY AND PULL IN OTHER:
+>> cd myRepo
+>> echo "changes from new clone" >> file1.txt
+>> git add .
+>> git commit -m 'new copy commit'
+>> git push -u origin master
+>> cd ../../myRepo
+>> git PULL
+
+CHECK DIFFERENCES BETWEEN FILE AND ITS STAGED VERSION:
+>> echo "changes to be staged" >> file1.txt
+>> git add file1.txt
+>> git diff --staged
+
+IGNORE A FEW FILES TO BE CHECKED IN:
+>> touch ignore1.txt ignore2.txt ignore3.txt
+>> printf "ignore1.txt\nignore2.txt\nignore3.txt" >> ./.git/info/exclude
+
+CREATE A NEW BRANCH:
+>> git branch newbranch
+
+DIVERGE BRANCHES WITH COMMITS & 
+EDIT SAME FILE ON SAME LINE ON BOTH BRANCHES:
+>> git checkout newbranch
+>> echo 'change from newbranch' >> file1.txt
+>> git add file1.txt
+>> git commit -m 'from newbranch'
+>> git push -u origin master
+>> git checkout master
+>> echo 'change from master' >> file1.txt
+>> git add file1.txt
+>> git commit -m 'from master'
+>> git push -u origin master
+
+TRY MERGING AND RESOLVE CONFLICTS:
+>> git merge newbranch
+
+STASH THEN POP:
+>> git stash pop
