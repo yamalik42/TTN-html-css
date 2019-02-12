@@ -12,5 +12,10 @@ the same line, whereas inline level elements only take up as much width as requi
                     relation to other elements on the page. In particular, it won't take up any space or effect
                     spacing in any way.
 
-3. Float affects the positioning of an element in relation to its neighboring floated/non-floated elements
-which are part of the webpages "flow" (all elements with {position: relative/static})
+3. Float affects the positioning of an element relative to its normal flow. Elements can either be floated left 
+or right which, respectively, will position the element over to the left or right of its container element until
+it touches the left or right side of the container or another floated element. The clear property is relevant for
+non-floated elements which should 'clear' any adjacent floats. A cleared element will be able to move down to a 
+new line relative to an adjacent float which it otherwise would have been horizontally parallel with.
+
+4.
